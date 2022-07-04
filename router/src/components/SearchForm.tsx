@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useSearchResults } from "../hooks";
-
+import { MainButton } from "../ui/buttons";
 export function SearchForm() {
   const navigate = useNavigate();
 
@@ -15,7 +15,7 @@ export function SearchForm() {
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="query" id="" />
-      <button>Buscar</button>
+      <MainButton>Buscar</MainButton>
       <h4>Resultados: {}</h4>
     </form>
   );
