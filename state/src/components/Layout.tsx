@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Outlet } from "react-router-dom";
-import { SearchForm } from "./SearchForm";
-
+// import { MyContext } from "..";
 export function Layout() {
+  // const data = useContext(MyContext);
+
   return (
     <div>
       <header>Header</header>

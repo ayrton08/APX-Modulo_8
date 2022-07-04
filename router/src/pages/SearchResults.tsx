@@ -1,21 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
+import { useSearchResults } from "../hooks";
 
 export function SearchResults() {
-  const [results, setResults] = useState([]);
   const params = useParams();
-
-  async function pullResults(q) {
-    const res = await fetch(
-      `https://api.mercadolibre.com/sites/MLA/search?q=${q}`
-    );
-    const data = await res.json();
-    setResults(data.results);
-  }
-  console.log(results);
-  useEffect(() => {
-    pullResults(params.query);
-  }, [params.query]);
+  const results = useSearchResults(params.query);
 
   return (
     <ul>

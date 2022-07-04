@@ -14,7 +14,7 @@ module.exports = {
   entry: "./src/index.tsx",
   watch: dev,
   resolve: {
-    extensions: [".tsx", ".js"],
+    extensions: [".ts", ".tsx", ".js"],
   },
   module: {
     rules: [

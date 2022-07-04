@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
+import { useSearchResults } from "../hooks";
 
 export function SearchForm() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export function SearchForm() {
     <form onSubmit={handleSubmit}>
       <input type="text" name="query" id="" />
       <button>Buscar</button>
+      <h4>Resultados: {}</h4>
     </form>
   );
 }
